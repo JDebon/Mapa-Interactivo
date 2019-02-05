@@ -2,7 +2,7 @@ geocodificadorModulo = (function() {
     var geocodificador; // Geocodificador que dada una dirección devuelve una coordenada
 
     // Permite obtener las coordenadas y las usa con la función llamada por parámtero
-    function usaDireccion(geocodificador, direccion, funcionALlamar) {
+    function usaDireccion(direccion, funcionALlamar) {
         /* Completar la función usaDireccion(dirección,funcionALlamar)
     	para que se obtengan las coordenadas a partir de la dirección pasada por parámetro
     	y que llame a la función pasada por parámetro con los siguientes parámetros
@@ -38,7 +38,6 @@ geocodificadorModulo = (function() {
                     // code for enter
                     var direccion = document.getElementById("direccion").value;
                     that.usaDireccion(
-                        geocodificador,
                         direccion,
                         direccionesModulo.agregarDireccionYMostrarEnMapa
                     );

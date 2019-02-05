@@ -11,6 +11,12 @@ marcadorModulo = (function () {
         en la posición pasada por parámetro y mostrarlo en el mapa.
         Este marcador debe tener un título, una animación.
         El marcador que vas a crear debe asignarse a la variable miMarcador */
+
+        if(miMarcador !== null && miMarcador !== undefined) {
+          miMarcador.setMap(null);
+          miMarcador = null;
+        }
+
         miMarcador = new google.maps.Marker({
           position: ubicacion,
           map: mapa,
@@ -163,7 +169,7 @@ marcadorModulo = (function () {
         // Muestra marcador cuando se presioná enteren el campo direccion
     $('#direccion').keypress(function (e) {
       if (e.keyCode == 13) {
-        marcadorModulo.mostrarMiMarcador(ubicacion)
+        marcadorModulo.mostrarMiMarcador()
       }
     })
     infoVentana = new google.maps.InfoWindow()
